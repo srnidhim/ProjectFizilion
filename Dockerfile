@@ -1,20 +1,8 @@
-FROM elytra8/projectfizilion:latest
+FROM kenhv/kensurbot:alpine
 
-RUN mkdir /Fizilion && chmod 777 /Fizilion
-ENV PATH="/Fizilion/bin:$PATH"
-WORKDIR /Fizilion
+RUN git clone -b main https://github.com/pratyakshm/bigsurbot /root/userbot
+RUN mkdir /root/userbot/bin/
+RUN chmod 777 /root/userbot
+WORKDIR /root/userbot/
 
-RUN git clone https://github.com/ElytrA8/ProjectFizilion -b dragon /Fizilion
-
-#
-# Copies session and config(if it exists)
-#
-COPY ./sample_config.env ./userbot.session* ./config.env* /Fizilion/
-#transfer
-
-RUN curl -sL https://git.io/file-transfer | sh
-
-#
-# Finalization
-#
 CMD ["python3","-m","userbot"]
