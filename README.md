@@ -1,4 +1,5 @@
-# Project Fizilion
+# Project Fizilion is no longer active, and users are recommended to shift to [BigSur bot](https://github.com/pratyakshm/BigSurBot).
+## Project Fizilion
 
 ![logo](https://github.com/ElytrA8/ProjectFizilion/raw/dragon/resources/curved.png)
 
